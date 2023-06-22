@@ -12,8 +12,6 @@ public class GameManager : MonoBehaviour
 	public GameObject Object;
 	public Transform spawnPoint;
 	public float objectInterver;
-	public LayerMask playerLayer;
-	public LayerMask objectLayer;
 	public bool isFirst = false;
 	Coroutine spawn;
 	public float moveSpeed;
