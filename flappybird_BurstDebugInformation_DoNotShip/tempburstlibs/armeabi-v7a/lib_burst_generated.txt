@@ -175,11 +175,11 @@ Library: lib_burst_generated
 --root-assembly=C:\Unity_Git\Flappy-Brid\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.WinRTStub.dll
 --root-assembly=C:\Unity_Git\Flappy-Brid\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
 --root-assembly=C:\Unity_Git\Flappy-Brid\Temp\StagingArea\Data\Managed\Unity.2D.IK.Runtime.dll
+--root-assembly=C:\Unity_Git\Flappy-Brid\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Unity_Git\Flappy-Brid\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.SecurityCore.dll
 --root-assembly=C:\Unity_Git\Flappy-Brid\Temp\StagingArea\Data\Managed\Unity.2D.Common.Runtime.dll
 --root-assembly=C:\Unity_Git\Flappy-Brid\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.Security.dll
 --root-assembly=C:\Unity_Git\Flappy-Brid\Temp\StagingArea\Data\Managed\Unity.ProBuilder.KdTree.dll
---root-assembly=C:\Unity_Git\Flappy-Brid\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Unity_Git\Flappy-Brid\Temp\StagingArea\Data\Managed\Unity.2D.Tilemap.Extras.dll
 --root-assembly=C:\Unity_Git\Flappy-Brid\Temp\StagingArea\Data\Managed\Unity.Analytics.DataPrivacy.dll
 --root-assembly=C:\Unity_Git\Flappy-Brid\Temp\StagingArea\Data\Managed\Purchasing.Common.dll
