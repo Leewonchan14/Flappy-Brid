@@ -1,12 +1,27 @@
 fileFormatVersion: 2
-guid: abc793146e0fe274b99a936886463550
+guid: dffef66376be4fa480fb02b19edbe903
 TextureImporter:
-  internalIDToNameTable: []
+  fileIDToRecycleName:
+    21300000: EmojiOne_0
+    21300002: EmojiOne_1
+    21300004: EmojiOne_2
+    21300006: EmojiOne_3
+    21300008: EmojiOne_4
+    21300010: EmojiOne_6
+    21300012: EmojiOne_7
+    21300014: EmojiOne_8
+    21300016: EmojiOne_9
+    21300018: EmojiOne_10
+    21300020: EmojiOne_11
+    21300022: EmojiOne_12
+    21300024: EmojiOne_13
+    21300026: EmojiOne_5
+    21300028: EmojiOne_14
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 5
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -21,21 +36,17 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 0
-  streamingMipmapsPriority: 0
-  vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
-  textureFormat: 1
+  textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
-    aniso: 1
-    mipBias: 0
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -47,27 +58,21 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 0
   textureShape: 1
   singleChannelComponent: 0
-  flipbookRows: 1
-  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
-  applyGammaDecoding: 0
-  cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -76,10 +81,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -88,10 +92,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -100,10 +103,9 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 2
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -112,30 +114,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FlappySprite_0
+      name: EmojiOne_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 626
-        width: 226
-        height: 114
+        y: 384
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +132,79 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9414074b7f4f5734e8fb6163d5e9985f
-      internalID: -513212135
+      spriteID: 4bcc36da2108f2c4ba3de5c921d25c3c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FlappySprite_1
+      name: EmojiOne_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9eea8093eaeaee4d901c4553f572c22
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojiOne_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49451da35411dcc42a3692e39b0fde70
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojiOne_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65709664b924904790c850a50ca82bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojiOne_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 513
-        width: 307
-        height: 112
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +212,139 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89693da4795b7de4fad53cd73608118f
-      internalID: -953357633
+      spriteID: 5b92c568a5ec9ad4b9ed90e271f1c9a8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FlappySprite_2
+      name: EmojiOne_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10f2b48b7281594bb8a24a6511a35af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojiOne_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a600f9329dc2246a897e89f4d283cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojiOne_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66cffa363b90ab14787d8a5b90cf4502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojiOne_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55cf3d409c9b89349b1e1bdc1cc224ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojiOne_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9e58eaf96feef42bcefa1cf257193f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojiOne_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2489120affc155840ae6a7be2e93ce19
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojiOne_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 288
-        height: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,83 +352,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed7246824fcd6f44e83d8b1503dfb8f5
-      internalID: 1937210756
+      spriteID: 412349a150598d14da4d7140df5c0286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FlappySprite_3
+      name: EmojiOne_13
       rect:
         serializedVersion: 2
-        x: 289
-        y: 361
-        width: 189
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7363387230fdc214e80c34b5c8631e91
-      internalID: 1791262562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlappySprite_5
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 317
-        width: 173
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06a501f4f65b70e458703cd5fbeaebda
-      internalID: 1639517489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlappySprite_7
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 270
-        width: 191
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f18ee4d74fc7024592a0735ddea169a
-      internalID: 345794387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlappySprite_9
-      rect:
-        serializedVersion: 2
-        x: 289
+        x: 128
         y: 0
-        width: 52
-        height: 270
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,218 +372,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ed75ef681425f94585641734c51151c
-      internalID: -701640358
+      spriteID: a937464b42bb3634782dea34c6becb6c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FlappySprite_10
+      name: EmojiOne_5
       rect:
         serializedVersion: 2
-        x: 341
-        y: 65
-        width: 39
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f69e295e4d1a3ca4680f45e5505d2d30
-      internalID: -351393620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlappySprite_11
-      rect:
-        serializedVersion: 2
-        x: 421
-        y: 79
-        width: 32
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f2b26896959a4445a13464d9cd9514b
-      internalID: 1071808446
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlappySprite_13
-      rect:
-        serializedVersion: 2
-        x: 421
-        y: 50
-        width: 26
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b87a79e8fa0089d4aa89f8a4ce444dbf
-      internalID: 936882798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlappySprite_15
-      rect:
-        serializedVersion: 2
-        x: 356
-        y: 48
-        width: 10
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b24d5f1610e56c74dbf6278cb0aff73f
-      internalID: -2036761116
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlappySprite_16
-      rect:
-        serializedVersion: 2
-        x: 421
-        y: 25
-        width: 34
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64d6301b235fff24ab30c9d6b47f72f2
-      internalID: 454132981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlappySprite_17
-      rect:
-        serializedVersion: 2
-        x: 456
-        y: 25
-        width: 26
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9dcf6b116541fe44b9f085313755d561
-      internalID: -352944177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlappySprite_19
-      rect:
-        serializedVersion: 2
-        x: 348
+        x: 256
         y: 0
-        width: 24
-        height: 36
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e619cacee3f4ea4478831b1338d64a29
-      internalID: 1261860544
+      spriteID: b0f933b217682124dbfc5e6b89abe3d0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FlappySprite_21
+      name: EmojiOne_14
       rect:
         serializedVersion: 2
-        x: 376
-        y: 16
-        width: 44
-        height: 18
+        x: 128
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e83973545adfbb6409070b9d6ade78e5
-      internalID: 1094334749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlappySprite_22
-      rect:
-        serializedVersion: 2
-        x: 421
-        y: 0
-        width: 34
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62188d190f182ad409122b62165aa0e2
-      internalID: -1194672513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FlappySprite_23
-      rect:
-        serializedVersion: 2
-        x: 456
-        y: 0
-        width: 34
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e36cd96480bac7e4c9a66e3bd27ae2ec
-      internalID: -1218849681
+      spriteID: f7235c763afe4434e8bb666750a41096
       vertices: []
       indices: 
       edges: []
@@ -488,41 +420,12 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    spriteID: 3e32d8f5477abfc43b19066e8ad5032e
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
-    nameFileIdTable:
-      FlappySprite_5: 1639517489
-      FlappySprite_7: 345794387
-      FlappySprite_9: -701640358
-      FlappySprite_15: -2036761116
-      FlappySprite_17: -352944177
-      FlappySprite_8: 338670960
-      FlappySprite_3: 1791262562
-      FlappySprite_4: 380106096
-      FlappySprite_21: 1094334749
-      FlappySprite_16: 454132981
-      FlappySprite_10: -351393620
-      FlappySprite_6: -370002738
-      FlappySprite_13: 936882798
-      FlappySprite_19: 1261860544
-      FlappySprite_18: -1017726937
-      FlappySprite_22: -1194672513
-      FlappySprite_14: -1342997036
-      FlappySprite_1: -953357633
-      FlappySprite_0: -513212135
-      FlappySprite_11: 1071808446
-      FlappySprite_12: -1869738275
-      FlappySprite_20: -826687703
-      FlappySprite_2: 1937210756
-      FlappySprite_23: -1218849681
   spritePackingTag: 
-  pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

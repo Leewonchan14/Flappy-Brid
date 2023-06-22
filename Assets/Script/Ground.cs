@@ -15,15 +15,14 @@ public class Ground : MonoBehaviour
   }
   void Start()
   {
-
+			
   }
 
   // Update is called once per frame
   void FixedUpdate()
   {
-
-    transform.position += new Vector3(-GameManager.Instance.moveSpeed, 0);
-    if (transform.position.x <= offset)
-      transform.position = initPoistion;
+		transform.position += new Vector3(-GameManager.Instance.moveSpeed, 0);
+		if (transform.position.x <= offset)
+			transform.position = initPoistion;
   }
 }
