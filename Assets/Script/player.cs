@@ -22,19 +22,25 @@ public class player : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if(EventSystem.current.IsPointerOverGameObject() == false){
-      if(Input.GetMouseButtonDown(0) && GameManager.Instance.CanTouch){
-        if(GameManager.Instance.isFirst){
+    if (EventSystem.current.IsPointerOverGameObject() == false)
+    {
+      if (Input.GetMouseButtonDown(0) 
+                        && GameManager.Instance.CanTouch
+                                            && !GameManager.Instance.isStop)
+      {
+        if (GameManager.Instance.isFirst)
+        {
           GameManager.Instance.Play();
           OnTap();
         }
-        if(GameManager.Instance.isPlay){
+        if (GameManager.Instance.isPlay)
+        {
           OnTap();
         }
       }
     }
-    anim.SetBool("isPlay",GameManager.Instance.isPlay);
-    anim.SetBool("isFirst",GameManager.Instance.isFirst);
+    anim.SetBool("isPlay", GameManager.Instance.isPlay);
+    anim.SetBool("isFirst", GameManager.Instance.isFirst);
   }
   private void FixedUpdate()
   {
@@ -64,6 +70,13 @@ public class player : MonoBehaviour
     if (other.gameObject.layer == LayerMask.NameToLayer("Object") || other.gameObject.tag == "Ground")
     {
       GameManager.Instance.Die();
+    }
+  }
+  private void OnCollisionExit2D(Collision2D other)
+  {
+    if (other.gameObject.layer == LayerMask.NameToLayer("Goal"))
+    {
+      GameManager.Instance.addScore();
     }
   }
 }

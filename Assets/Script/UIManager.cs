@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class UIManager : MonoBehaviour
   public GameObject startUI;
   public GameObject dieUI;
   public GameObject fadeIn;
-  public GameObject score;
+  public TextMeshProUGUI scoreTextUI;
   public Animator canvasAnim;
   public Image pauseButtonImage;
   public Sprite[] pauseSprite;

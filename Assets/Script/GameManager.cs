@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
 	GameObject dieUI;
 	GameObject startUI;
 	GameObject fade;
+	TextMeshProUGUI scoreTextUI;
 	Animator canvasAnim;
 	public GameObject Object;
 	public Transform spawnPoint;
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour
 	public float jumpPower;
 	public bool isPlay = true;
 	public bool isStop = false;
+	public bool isCounting = false;
 	public bool CanTouch;
 	public int score;
   // 게임 매니저에 대한 접근을 제공하는 프로퍼티
@@ -47,6 +50,7 @@ public class GameManager : MonoBehaviour
 	void Update() {
     canvasAnim.SetBool("isPlay", isPlay);
 		canvasAnim.SetBool("isFirst",isFirst);
+		canvasAnim.SetBool("isCounting",isCounting);
 		CanTouch = !fade.activeSelf;
 	}
 	IEnumerator Spawn(){
@@ -58,6 +62,7 @@ public class GameManager : MonoBehaviour
 	public void FirstStart(){
 		isFirst = true;
 		startUI.SetActive(false);
+		score = 100;
 	}
 	public void Play(){
 		isPlay = true;
@@ -96,6 +101,11 @@ public class GameManager : MonoBehaviour
 		dieUI = uI.dieUI;
 		startUI = uI.startUI;
 		canvasAnim = uI.canvasAnim;
+		scoreTextUI = uI.scoreTextUI;
 		fade = uI.fadeIn;
+	}
+	public void addScore(){
+		score += 1;
+		scoreTextUI.text = $"{score}";
 	}
 }
