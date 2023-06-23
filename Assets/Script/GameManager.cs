@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 	}
 	void Update() {
     canvasAnim.SetBool("isPlay", isPlay);
+		canvasAnim.SetBool("isFirst",isFirst);
 	}
 	IEnumerator Spawn(){
 		while(true){
