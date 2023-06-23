@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 public class player : MonoBehaviour
 {
   public float upHeadZ;
@@ -22,13 +22,15 @@ public class player : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if(Input.GetMouseButtonDown(0)){
-      if(GameManager.Instance.isFirst){
-        GameManager.Instance.Play();
-        OnTap();
-      }
-      if(GameManager.Instance.isPlay){
-        OnTap();
+    if(EventSystem.current.IsPointerOverGameObject() == false){
+      if(Input.GetMouseButtonDown(0) && GameManager.Instance.CanTouch){
+        if(GameManager.Instance.isFirst){
+          GameManager.Instance.Play();
+          OnTap();
+        }
+        if(GameManager.Instance.isPlay){
+          OnTap();
+        }
       }
     }
     anim.SetBool("isPlay",GameManager.Instance.isPlay);

@@ -7,8 +7,9 @@ public class GameManager : MonoBehaviour
 {
 	private static GameManager instance;
 	GameObject Tuto;
-	GameObject restart;
-	GameObject startButton;
+	GameObject dieUI;
+	GameObject startUI;
+	GameObject fade;
 	Animator canvasAnim;
 	public GameObject Object;
 	public Transform spawnPoint;
@@ -19,6 +20,9 @@ public class GameManager : MonoBehaviour
 	float initialMoveSpeed;
 	public float jumpPower;
 	public bool isPlay = true;
+	public bool isStop = false;
+	public bool CanTouch;
+	public int score;
   // 게임 매니저에 대한 접근을 제공하는 프로퍼티
 	public static GameManager Instance
 	{
@@ -43,12 +47,17 @@ public class GameManager : MonoBehaviour
 	void Update() {
     canvasAnim.SetBool("isPlay", isPlay);
 		canvasAnim.SetBool("isFirst",isFirst);
+		CanTouch = !fade.activeSelf;
 	}
 	IEnumerator Spawn(){
 		while(true){
 			Instantiate(Object, spawnPoint.position, Quaternion.identity);
 			yield return new WaitForSeconds(objectInterver);
 		}
+	}
+	public void FirstStart(){
+		isFirst = true;
+		startUI.SetActive(false);
 	}
 	public void Play(){
 		isPlay = true;
@@ -57,13 +66,24 @@ public class GameManager : MonoBehaviour
 		Physics2D.gravity = Vector3.down * 9.8f;
 		Tuto.SetActive(false);
 	}
+	public void Pause(){
+		if(!isStop){
+			isStop = true;
+			Time.timeScale = 0;
+			CanTouch = false;
+		} else{
+			isStop = false;
+			Time.timeScale = 1;
+			CanTouch = true;
+		}
+	}
 	public void Die(){
 		isPlay = false;
 		isFirst = false;
 		moveSpeed = 0;
 		StopCoroutine(spawn);
 		Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Object"), true);
-		restart.SetActive(true);
+		dieUI.SetActive(true);
 	}
 	public void Restart(){
 		Physics2D.gravity = Vector3.zero;
@@ -73,8 +93,9 @@ public class GameManager : MonoBehaviour
 	}
 	public void UISet(UIManager uI){
 		Tuto = uI.Tuto;
-		restart = uI.restart;
-		startButton = uI.startButton;
+		dieUI = uI.dieUI;
+		startUI = uI.startUI;
 		canvasAnim = uI.canvasAnim;
+		fade = uI.fadeIn;
 	}
 }
