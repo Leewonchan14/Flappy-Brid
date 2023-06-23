@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 	GameObject Tuto;
 	GameObject restart;
 	GameObject startButton;
+	Animator canvasAnim;
 	public GameObject Object;
 	public Transform spawnPoint;
 	public float objectInterver;
@@ -38,6 +39,9 @@ public class GameManager : MonoBehaviour
 
 		Physics2D.gravity = Vector3.zero;
 		initialMoveSpeed = moveSpeed;
+	}
+	void Update() {
+    canvasAnim.SetBool("isPlay", isPlay);
 	}
 	IEnumerator Spawn(){
 		while(true){
@@ -70,5 +74,6 @@ public class GameManager : MonoBehaviour
 		Tuto = uI.Tuto;
 		restart = uI.restart;
 		startButton = uI.startButton;
+		canvasAnim = uI.canvasAnim;
 	}
 }

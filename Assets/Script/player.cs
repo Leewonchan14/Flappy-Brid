@@ -9,9 +9,11 @@ public class player : MonoBehaviour
   public float rotateSpeed;
   float t = 0f;
   Rigidbody2D rb;
+  Animator anim;
   private void Awake()
   {
     rb = GetComponent<Rigidbody2D>();
+    anim = GetComponent<Animator>();
   }
   void Start()
   {
@@ -29,6 +31,8 @@ public class player : MonoBehaviour
         OnTap();
       }
     }
+    anim.SetBool("isPlay",GameManager.Instance.isPlay);
+    anim.SetBool("isFirst",GameManager.Instance.isFirst);
   }
   private void FixedUpdate()
   {

@@ -8,6 +8,8 @@ public class UIManager : MonoBehaviour
   public GameObject Tuto;
   public GameObject startButton;
   public GameObject restart;
+  public GameObject fadeIn;
+  public Animator canvasAnim;
   // Start is called before the first frame update
   void Start()
   {
@@ -26,5 +28,9 @@ public class UIManager : MonoBehaviour
   public void ButtonReStart()
   {
     GameManager.Instance.Restart();
+  }
+  IEnumerator FadeIn(){
+    yield return new WaitForSeconds(1);
+    fadeIn.SetActive(false);
   }
 }
