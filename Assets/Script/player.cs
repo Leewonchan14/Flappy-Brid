@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+
 public class player : MonoBehaviour
 {
   public float upHeadZ;
@@ -10,10 +12,16 @@ public class player : MonoBehaviour
   float t = 0f;
   Rigidbody2D rb;
   Animator anim;
+  int pointerID;
   private void Awake()
   {
     rb = GetComponent<Rigidbody2D>();
     anim = GetComponent<Animator>();
+    if(Application.platform == RuntimePlatform.WindowsPlayer){
+      pointerID = -1; //PC나 유니티 상에서는 -1
+    } else if(Application.platform == RuntimePlatform.Android){
+      pointerID = 0;  // 휴대폰이나 이외에서 터치 상에서는 0 
+    }
   }
   void Start()
   {
@@ -22,20 +30,19 @@ public class player : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if (EventSystem.current.IsPointerOverGameObject() == false)
-    {
-      if (Input.GetMouseButtonDown(0) 
-                        && GameManager.Instance.CanTouch
-                                            && !GameManager.Instance.isStop)
-      {
-        if (GameManager.Instance.isFirst)
+    if (Input.touchCount > 0 ){
+      Touch touch = Input.GetTouch(0);
+      if(touch.phase == TouchPhase.Began){
+        if(GameManager.Instance.CanTouch
+            && !GameManager.Instance.isStop
+              && EventSystem.current.IsPointerOverGameObject(pointerID) == false)
         {
-          GameManager.Instance.Play();
-          OnTap();
-        }
-        if (GameManager.Instance.isPlay)
-        {
-          OnTap();
+          if (GameManager.Instance.isFirst || GameManager.Instance.isPlay)
+          {
+            if (GameManager.Instance.isFirst)
+              GameManager.Instance.Play();
+            OnTap();
+          }
         }
       }
     }

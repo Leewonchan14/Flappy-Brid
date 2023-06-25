@@ -67,9 +67,9 @@ public class GameManager : MonoBehaviour
 		Physics2D.gravity = Vector3.down * 9.8f;
 	}
 	public void Pause(){
-		Time.timeScale = !isStop? 0 : 1;
-		CanTouch = isStop;
 		isStop = !isStop;
+		CanTouch = !isStop;
+		Time.timeScale = isStop? 0 : 1;
 	}
 	public void Die(){
 		isPlay = false;
