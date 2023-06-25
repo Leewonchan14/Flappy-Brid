@@ -49,6 +49,8 @@ public class UIManager : MonoBehaviour
   public void ButtonStart()
   {
     GameManager.Instance.FirstStart();
+    scoreTextUI.text = "0";
+    scoreInfoTextUI.text = "0";
     bestScoreInfoTestUI.text = PlayerPrefs.GetInt("score").ToString();
   }
   public void ButtonReStart()

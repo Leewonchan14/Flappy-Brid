@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 			PlayerPrefs.SetInt("score",MaxScore);
 		}
 		PlayerPrefs.SetInt("score",PlayerPrefs.GetInt("score", 0));
-
+		Application.targetFrameRate = 300;
 	}
 	void Update() {
     CanTouch = !UIManager.Instance.fadeIn.activeSelf;
