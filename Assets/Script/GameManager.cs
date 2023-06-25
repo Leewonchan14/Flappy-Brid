@@ -7,15 +7,10 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
 	private static GameManager instance;
-	GameObject Tuto;
-	GameObject dieUI;
-	GameObject startUI;
-	GameObject fade;
-	TextMeshProUGUI scoreTextUI;
-	Animator canvasAnim;
 	public GameObject Object;
 	public Transform spawnPoint;
 	public float objectInterver;
+	public int MaxScore;
 	public bool isFirst = false;
 	Coroutine spawn;
 	public float moveSpeed;
@@ -46,12 +41,14 @@ public class GameManager : MonoBehaviour
 
 		Physics2D.gravity = Vector3.zero;
 		initialMoveSpeed = moveSpeed;
+		if(MaxScore != -1){
+			PlayerPrefs.SetInt("score",MaxScore);
+		}
+		PlayerPrefs.SetInt("score",PlayerPrefs.GetInt("score", 0));
+
 	}
 	void Update() {
-    canvasAnim.SetBool("isPlay", isPlay);
-		canvasAnim.SetBool("isFirst",isFirst);
-		canvasAnim.SetBool("isCounting",isCounting);
-		CanTouch = !fade.activeSelf;
+    CanTouch = !UIManager.Instance.fadeIn.activeSelf;
 	}
 	IEnumerator Spawn(){
 		while(true){
@@ -61,26 +58,18 @@ public class GameManager : MonoBehaviour
 	}
 	public void FirstStart(){
 		isFirst = true;
-		startUI.SetActive(false);
-		score = 100;
+		score = 0;
 	}
 	public void Play(){
 		isPlay = true;
 		isFirst = false;
 		spawn = StartCoroutine(Spawn());
 		Physics2D.gravity = Vector3.down * 9.8f;
-		Tuto.SetActive(false);
 	}
 	public void Pause(){
-		if(!isStop){
-			isStop = true;
-			Time.timeScale = 0;
-			CanTouch = false;
-		} else{
-			isStop = false;
-			Time.timeScale = 1;
-			CanTouch = true;
-		}
+		Time.timeScale = !isStop? 0 : 1;
+		CanTouch = isStop;
+		isStop = !isStop;
 	}
 	public void Die(){
 		isPlay = false;
@@ -88,7 +77,6 @@ public class GameManager : MonoBehaviour
 		moveSpeed = 0;
 		StopCoroutine(spawn);
 		Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Object"), true);
-		dieUI.SetActive(true);
 	}
 	public void Restart(){
 		Physics2D.gravity = Vector3.zero;
@@ -96,16 +84,8 @@ public class GameManager : MonoBehaviour
 		Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Object"), false);
 		SceneManager.LoadScene(0);
 	}
-	public void UISet(UIManager uI){
-		Tuto = uI.Tuto;
-		dieUI = uI.dieUI;
-		startUI = uI.startUI;
-		canvasAnim = uI.canvasAnim;
-		scoreTextUI = uI.scoreTextUI;
-		fade = uI.fadeIn;
-	}
 	public void addScore(){
 		score += 1;
-		scoreTextUI.text = $"{score}";
+		UIManager.Instance.addScore(score);
 	}
 }
